@@ -22,8 +22,7 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: 22
           script: |
-            cd CI-CD
-            git pull
+            cd CI-CD/my-app
+            git pull origin main
             npm install
             npm run build
-            npm run start
